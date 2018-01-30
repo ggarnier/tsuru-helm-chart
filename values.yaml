@@ -252,7 +252,7 @@ nginx-ingress:
     ## Allows customization of the external service
     ## the ingress will be bound to via DNS
     publishService:
-      enabled: true 
+      enabled: false 
       ## Allows overriding of the publish service to bind to
       ## Must be <namespace>/<service_name>
       ##
@@ -343,9 +343,9 @@ nginx-ingress:
         http: 80
         https: 443
 
-      type: LoadBalancer
+      #type: LoadBalancer
 
-      # type: NodePort
+      type: NodePort
       nodePorts:
         http: 32080
         https: 32443
